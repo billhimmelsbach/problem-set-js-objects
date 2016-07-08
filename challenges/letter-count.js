@@ -30,4 +30,25 @@
 
 */
 
-// YOUR CODE HERE
+function letterCount(word) {
+  var wordArray = word.toLowerCase().replace(/[^A-Z0-9]/ig, '').split('');
+  console.log(wordArray);
+  var sortedWordArray = wordArray.sort();
+  console.log(sortedWordArray);
+  var letterBefore = null;
+  var numberOfLetter = 0;
+    for (var i = 0; i < sortedWordArray.length;  i++) {
+      if (sortedWordArray[i] != letterBefore) {
+        if (numberOfLetter > 0) {
+            console.log(letterBefore + " " + numberOfLetter/sortedWordArray.length);
+        }
+        letterBefore = sortedWordArray[i];
+        numberOfLetter = 1;
+    } else {
+        numberOfLetter+=1;
+    }
+}
+if (numberOfLetter > 0) {
+    console.log(letterBefore + " " + numberOfLetter/sortedWordArray.length);
+}
+}

@@ -43,5 +43,32 @@
     ```
 
 */
+function parseQueryString(string) {
+    var stringArray = string.split('&');
+    var finalStringObject = {};
+      stringArray.forEach(function(strings) {
+        var parsedStrings = strings.split('=');
+        finalStringObject[parsedStrings[0]]=parsedStrings[1];
+      });
+  console.log(finalStringObject);
+    }
+    // var stringArraySeperate =string.split('=');
+    // console.log(stringArraySeperate);
 
-// YOUR CODE HERE
+  // var stringArray = string.split('');
+//   var characterBefore = null;
+//     for (var i = 0; i < stringArray.length;  i++) {
+//       if (sortedWordArray[i] === "&") {
+//
+//             console.log(letterBefore + " " + numberOfLetter/sortedWordArray.length);
+//         }
+//         letterBefore = sortedWordArray[i];
+//         numberOfLetter = 1;
+//     } else {
+//         numberOfLetter+=1;
+//     }
+// }
+// if (numberOfLetter > 0) {
+//     console.log(letterBefore + " " + numberOfLetter/sortedWordArray.length);
+// }
+// }

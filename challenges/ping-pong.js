@@ -36,5 +36,38 @@
   - Support multiple ping-pongs.
 
 */
+// function pingPongDUMB(array) {
+//   console.log(array[0]);
+//   console.log(array.length);
+// }
 
-// YOUR CODE HERE
+function pingPong(array) {
+  console.log(array);
+  var length= array.length;
+  console.log("yay!");
+  var direction = 1;
+
+
+  for (var i = 0; i < length-1; i++) {
+    if (array[i]) {
+      array[i].steps++;
+      array[i+1] = array[i];
+      array[i] = null;
+      console.log(array);
+    }
+    else {
+
+    }
+  }
+}
+pingPong([{steps: 0}, null, null, null]);
+
+
+// TRUTHY FALSEY HINTS
+// null and zero === falsey
+// number++ > doesn't return the addition
+// number += 1 reutnrs the addition
+// ++number returns the addition
+//       // everything that isn't that is null =!
+//   }
+// }
